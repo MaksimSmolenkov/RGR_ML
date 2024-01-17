@@ -5,4 +5,4 @@
 -На третьей странице располагаются графики с визуализацией.<br>
 -Четвертая интерактивная страница с предсказаниями моделей по введеным данным.<br>
 <br>
-https://mlrgrsmolenkov.streamlit.app/prediction
+https://mlrgrsmolenkov.streamlit.app
