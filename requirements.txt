@@ -4,7 +4,6 @@ matplotlib
 pandas
 scikit-learn == 1.2.2
 imblearn
-pickle
 cvxopt
 tensorflow
 scipy
