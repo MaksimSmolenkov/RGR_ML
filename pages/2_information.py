@@ -56,7 +56,7 @@ st.subheader('NC2.5')
 st.markdown('Численная концентрация твердых частиц меньше 2.5 микрометров')
 
 st.subheader('CNT')
-st.markdown('Счетчик образцов')
+st.markdown('Время срабатываения')
 
 st.subheader('Fire Alarm')
 st.markdown('Если есть пожар, то 1, иначе 0')
