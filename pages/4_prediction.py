@@ -1,7 +1,6 @@
 import pandas as pd 
 import numpy as np 
 import pickle
-import mlxtend
 import math
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 from sklearn.metrics import confusion_matrix, classification_report, roc_curve, roc_auc_score
