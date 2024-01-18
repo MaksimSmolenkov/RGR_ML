@@ -1,6 +1,7 @@
 import pandas as pd 
 import numpy as np 
 import pickle
+import mlxtend
 import math
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 from sklearn.metrics import confusion_matrix, classification_report, roc_curve, roc_auc_score
@@ -32,10 +33,28 @@ if df is not None:
 
     st.title("Fire Alarm Prediction") 
     list=[]
+    lis=[]
+    lis.append('Температура(градусы Цельсия)')
+    lis.append('Влажность(Проценты)')
+    lis.append('Летучие органические соединения(миллиардная доля)')
+    lis.append('Углекислый газ(миллиардная доля)')
+    lis.append('Водород(миллимоли на литр)')
+    lis.append('Этанол(миллимоли на литр)')
+    lis.append('Давление(гектопаскаль)')
+    lis.append('Наличие частиц размером 1.0 микрометров и меньше(миллимоли на литр)')
+    lis.append('Наличие частиц размером 2.5 микрометров и меньше(миллимоли на литр)')
+    lis.append('Численная концентрация твердых частиц меньше 0.5 микрометров(миллимоли на литр)')
+    lis.append('Численная концентрация твердых частиц меньше 1.0 микрометров(миллимоли на литр)')
+    lis.append('Численная концентрация твердых частиц меньше 2.5 микрометров(миллимоли на литр)')
+    lis.append('Срабавыние за время(минуты)')
+    j = 0
 
     for i in df.columns[:-1]:
+        st.markdown(lis[j])
         a = st.slider(i,int(df[i].min()), int(math.ceil(df[i].max())),int(df[i].max()/2))
         list.append(a)
+        st.markdown('---')
+        j+=1
 
     #list.append(a)
     list = np.array(list).reshape(1,-1)
