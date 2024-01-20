@@ -11,7 +11,11 @@ from sklearn.preprocessing import StandardScaler
 from imblearn.under_sampling import NearMiss 
 import io
 
-df = pd.read_csv('classification_data.csv')
+
+st.markdown('Загрузите датасет в формате csv "Срабатывания датчика дыма"')
+data = st.file_uploader("Выберите файл датасета", type=["csv"])
+
+df = pd.read_csv(data)
 
 def func(x):
     if x == 'Yes':
