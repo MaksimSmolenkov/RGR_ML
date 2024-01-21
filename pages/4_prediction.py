@@ -16,6 +16,7 @@ st.markdown('Загрузите датасет в формате csv "Сраба
 data = st.file_uploader("Выберите файл датасета", type=["csv"])
 
 df = pd.read_csv(data)
+#df = pd.read_csv('classification_data.csv')
 
 def func(x):
     if x == 'Yes':
@@ -59,7 +60,7 @@ if df is not None:
         st.markdown('---')
         j+=1
 
-    #list.append(a)
+   
     list = np.array(list).reshape(1,-1)
     list=list.tolist()
 
